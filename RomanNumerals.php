@@ -50,18 +50,16 @@ class RomanNumerals
                 $result = "\e[0;31mInvalid roman numeral\e[0m\n";
             } else {
                 for ($i = 0, $length = strlen($number); $i < $length; $i++) {
-                    //getting value of current char
+                    //get the value of current char
                     $value = $this->romanNumeralsMap[$number[$i]];
-                    //getting value of next char - null if there is no next char
+                    //get the value of next char - null if there is no next char
                     $nextVal = !isset($number[$i + 1]) ? null : $this->romanNumeralsMap[$number[$i + 1]];
-                    //adding/subtracting value from result based on $nextvalue
+                    //adding/subtracting value from result based on $nextval
                     $result += (!is_null($nextVal) && $nextVal > $value) ? -$value : $value;
                 }
             }
         }
-        //var_dump($result); die;
         return $result;
-        //$this->init();
     }
 
     /**
