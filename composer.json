@@ -1,0 +1,23 @@
+{
+    "name": "james/joshtest",
+    "description": "Roman Numerals Converter",
+    "type": "project",
+    "authors": [
+        {
+            "name": "James Njoroge",
+            "email": "patjayke@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "^9",
+        "codeception/codeception": "^4.1",
+        "codeception/module-phpbrowser": "^1.0.0",
+        "codeception/module-asserts": "^1.0.0"
+    },
+    "autoload": {
+        "files": [
+            "RomanNumerals.php"
+        ]
+    }
+}
